@@ -37,23 +37,37 @@ const paragraph = document.getElementById("paragraph");
 const gameArea = document.getElementById("gameArea");
 const start = document.getElementById("start");
 const infoBox = document.getElementById("info-box");
+const play = document.getElementById("play");
 
-const myTimer = setInterval(() => {
-    timer.innerHTML--;
-    if (timer.innerHTML == 0) {
-        paragraph.innerHTML = `${"you lost"}`;
-        paragraph.style.display = "flex";
-        paragraph.style.textDecorationColor = "red";
-        gameArea.style.display = "none";
-        infoBox.style.display = "none";
-        
-    }
-    if (timer.innerHTML <= 10) {
-        timer.style.color = "red";
-    } else{
-        timer.style.color = "black";
-    }
-}, 1000);
+play.onclick = () => {
+    const myTimer = setInterval(() => {
+        timer.innerHTML--;
+        if (timer.innerHTML == 0) {
+            paragraph.innerHTML = `${"you lost"}`;
+            paragraph.style.display = "flex";
+            paragraph.style.textDecorationColor = "red";
+            gameArea.style.display = "none";
+            infoBox.style.display = "none";  
+        }
+        if (score.innerHTML == 75) {
+            paragraph.innerHTML = `${"you won"}`;
+            paragraph.style.display = "flex";
+            paragraph.style.textDecorationColor = "#00FFFF";
+            gameArea.style.display = "none";
+            infoBox.style.display = "none";
+            clearInterval(timer);
+        }
+        if (timer.innerHTML <= 10) {
+            timer.style.color = "red";
+        } else{
+            timer.style.color = "black";
+        }
+    }, 1000);
+    play.style.display = "none";
+    gameArea.style.display = "flex";
+    infoBox.style.display = "flex";
+
+}
 
 
 n00.ondblclick = () => {
@@ -185,7 +199,7 @@ n64.ondblclick = () => {
         paragraph.style.textDecorationColor = "#00FFFF";
         gameArea.style.display = "none";
         infoBox.style.display = "none";
-        clearInterval(myTimer);
+        clearInterval(timer);
     }
 }
 paragraph.onclick = () => {
