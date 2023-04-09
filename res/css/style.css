@@ -24,11 +24,23 @@ body, html{
     width: 100%;
     height: 100%;
 
+} 
+#start{
+	position: absolute;
+	top: 194px;
+	left: 410px;
+	animation: pulse 1s alternate linear infinite;
+	display: block;
+}
+@keyframes pulse {
+	0%{color: whitesmoke};
+	100%{color: black};
 }
 h1{
-	font-size: 40px;
+	font-size: 50px;
 	text-align: center;
 	text-shadow:  1px 1px 0px #00FFFF;
+	padding: 0;
 }
 
 #scoreText, #timerText {
@@ -36,8 +48,18 @@ h1{
 	text-shadow:  1px 1px 0px #00FFFF;
 	font-size: 30px;
 }
-
-
+#scoreText{
+	position: absolute;
+	top: 65px;
+	right: 130px;
+	font-size: xx-large;
+}
+#timerText{
+	position: absolute;
+	top: 65px;
+	left: 130px;
+	font-size: xx-large;
+}
 
 #grid {
     width: 100%;
@@ -115,10 +137,4 @@ td div {
 #paragraph:hover{
 	text-decoration-color: #00FFFF;
 	border-radius: 50% 20% / 10% 40%;
-}
-#timerText{
-	position: absolute;
-	top: 65px;
-	left: 120px;
-	font-size: xx-large;
 }

@@ -35,22 +35,31 @@ const score = document.getElementById("score");
 const timer = document.getElementById("timer");
 const paragraph = document.getElementById("paragraph");
 const gameArea = document.getElementById("gameArea");
-const wrong = document.getElementById("wrong");
+const start = document.getElementById("start");
 
 const myTimer = setInterval(() => {
     timer.innerHTML--;
     if (timer.innerHTML == 0) {
         paragraph.innerHTML = `${"you lost"}`;
         paragraph.style.display = "flex";
+        paragraph.style.textDecorationColor = "red";
         gameArea.style.display = "none";
 
+    }
+    if (timer.innerHTML <= 10) {
+        timer.style.color = "red";
+    } else{
+        timer.style.color = "black";
     }
 }, 1000);
 
 
 n00.onclick = () => {
     lod0.style.display = "block";
+    start.style.display = "none";
     n00.style.borderColor = "red";
+    score.style.color = "gold";
+    score.style.textShadow = "2px 1.5px 0px black";
     if (score.innerHTML == 0) {
         score.innerHTML = 5;
     }
@@ -171,6 +180,7 @@ n64.onclick = () => {
     if (score.innerHTML == 75) {
         paragraph.innerHTML = `${"you won"}`;
         paragraph.style.display = "flex";
+        paragraph.style.textDecorationColor = "#00FFFF";
         gameArea.style.display = "none";
         clearInterval(myTimer);
     }
