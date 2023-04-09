@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,12 @@
     <title>LODĚ - GAME</title>
     <link rel="stylesheet" href="./res/css/style.css">
 </head>
+
 <body>
     <h1>LODĚ</h1>
+    <div id="scoreText">score: <span id="score">0</span></div>
     <div id="gameArea">
-      
+
         <div id="grid">
             <table>
                 <tr>
@@ -23,80 +26,180 @@
                     <th class="numbers">5</th>
                     <th class="numbers">6</th>
                 </tr>
-    
+
                 <tr>
                     <th class="letters">A</th>
-                    <td><div id="00"></div></td>
-                    <td><div id="01"></div></td>
-                    <td><div id="02"></div></td>
-                    <td><div id="03"></div></td>
-                    <td><div id="04"></div></td>
-                    <td><div id="05"></div></td>
-                    <td><div id="06"></div></td>
+                    <td id="00">
+                        <div id="lod0"></div>
+                    </td>
+                    <td id="01">
+                        <div id="lod1"></div>
+                    </td>
+                    <td>
+                        <div id="02"></div>
+                    </td>
+                    <td id="03">
+                        <div id="lod3"></div>
+                    </td>
+                    <td>
+                        <div id="02"></div>
+                    </td>
+                    <td>
+                        <div id="05"></div>
+                    </td>
+                    <td id="06">
+                        <div id="lod6" ></div>
+                    </td>
                 </tr>
-                    <tr>
+                <tr>
                     <th class="letters">B</th>
-                    <td><div id="10"></div></td>
-                    <td><div id="11"></div></td>
-                    <td><div id="12"></div></td>
-                    <td><div id="13"></div></td>
-                    <td><div id="14"></div></td>
-                    <td><div id="15"></div></td>
-                    <td><div id="16"></div></td>
+                    <td>
+                        <div id="10"></div>
+                    </td>
+                    <td>
+                        <div id="11"></div>
+                    </td>
+                    <td>
+                        <div id="12"></div>
+                    </td>
+                    <td id="13">
+                        <div id="lod13" ></div>
+                    </td>
+                    <td>
+                        <div id="14"></div>
+                    </td>
+                    <td>
+                        <div id="15"></div>
+                    </td>
+                    <td>
+                        <div id="16"></div>
+                    </td>
                 <tr>
                     <th class="letters">C</th>
-                    <td><div id="20"></div></td>
-                    <td><div id="21"></div></td>
-                    <td><div id="22"></div></td>
-                    <td><div id="23"></div></td>
-                    <td><div id="24"></div></td>
-                    <td><div id="25"></div></td>
-                    <td><div id="26"></div></td>
+                    <td  id="20">
+                        <div id="lod20"></div>
+                    </td>
+                    <td>
+                        <div id="21"></div>
+                    </td>
+                    <td>
+                        <div id="22"></div>
+                    </td>
+                    <td>
+                        <div id="23"></div>
+                    </td>
+                    <td  id="24">
+                        <div id="lod24"></div>
+                    </td>
+                    <td  id="25">
+                        <div id="lod25"></div>
+                    </td>
+                    <td>
+                        <div id="26"></div>
+                    </td>
                 </tr>
-                    </tr>
-                    <tr>
+                </tr>
+                <tr>
                     <th class="letters">D</th>
-                    <td><div id="30"></div></td>
-                    <td><div id="31"></div></td>
-                    <td><div id="32"></div></td>
-                    <td><div id="33"></div></td>
-                    <td><div id="34"></div></td>
-                    <td><div id="35"></div></td>
-                    <td><div id="36"></div></td>
+                    <td id="30">
+                        <div id="lod30"></div>
+                    </td>
+                    <td>
+                        <div id="31"></div>
+                    </td>
+                    <td>
+                        <div id="32"></div>
+                    </td>
+                    <td>
+                        <div id="33"></div>
+                    </td>
+                    <td>
+                        <div id="34"></div>
+                    </td>
+                    <td>
+                        <div id="35"></div>
+                    </td>
+                    <td id="36">
+                        <div id="lod36" ></div>
+                    </td>
                 </tr>
                 <tr>
                     <th class="letters">E</td>
-                    <td><div id="40"></div></td>
-                    <td><div id="41"></div></td>
-                    <td><div id="42"></div></td>
-                    <td><div id="43"></div></td>
-                    <td><div id="44"></div></td>
-                    <td><div id="45"></div></td>
-                    <td><div id="46"></div></td>
+                    <td id="40">
+                        <div id="lod40"></div>
+                    </td>
+                    <td>
+                        <div id="41"></div>
+                    </td>
+                    <td>
+                        <div id="42"></div>
+                    </td>
+                    <td id="43">
+                        <div id="lod43" ></div>
+                    </td>
+                    <td>
+                        <div id="44"></div>
+                    </td>
+                    <td>
+                        <div id="45"></div>
+                    </td>
+                    <td>
+                        <div id="46"></div>
+                    </td>
                 </tr>
                 <tr>
                     <th class="letters">F</td>
-                    <td><div id="50"></div></td>
-                    <td><div id="51"></div></td>
-                    <td><div id="52"></div></td>
-                    <td><div id="53"></div></td>
-                    <td><div id="54"></div></td>
-                    <td><div id="55"></div></td>
-                    <td><div id="56"></div></td>
+                    <td>
+                        <div id="50"></div>
+                    </td>
+                    <td>
+                        <div id="51"></div>
+                    </td>
+                    <td  id="52">
+                        <div id="lod52"></div>
+                    </td>
+                    <td>
+                        <div id="53"></div>
+                    </td>
+                    <td>
+                        <div id="54"></div>
+                    </td>
+                    <td>
+                        <div id="55"></div>
+                    </td>
+                    <td>
+                        <div id="56"></div>
+                    </td>
                 </tr>
                 <tr>
                     <th class="letters">G</td>
-                    <td><div id="60"></div></td>
-                    <td><div id="61"></div></td>
-                    <td><div id="62"></div></td>
-                    <td><div id="63"></div></td>
-                    <td><div id="64"></div></td>
-                    <td><div id="65"></div></td>
-                    <td><div id="66"></div></td>
+                    <td>
+                        <div id="60"></div>
+                    </td>
+                    <td>
+                        <div id="61"></div>
+                    </td>
+                    <td>
+                        <div id="62"></div>
+                    </td>
+                    <td  id="63">
+                        <div id="lod63"></div>
+                    </td>
+                    <td id="64">
+                        <div id="lod64" ></div>
+                    </td>
+                    <td>
+                        <div id="65"></div>
+                    </td>
+                    <td>
+                        <div id="66"></div>
+                    </td>
                 </tr>
             </table>
         </div>
     </div>
+    <div id="paragraph"></div>
     <script src="./res/js/main.js"></script>
 </body>
+
 </html>

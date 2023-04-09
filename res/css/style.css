@@ -5,7 +5,11 @@
     font-weight: bold;
     font-family: 'Bangers', cursive;
     user-select: none;
-   
+    transition: .5s all;
+}
+body, html{
+	margin: auto;
+	overflow: hidden;
 }
 
 #gameArea {
@@ -15,11 +19,21 @@
     align-items: center;
     width: 100%;
     height: 100%;
+
+}
+h1{
+	font-size: 40px;
+	text-align: center;
+	text-shadow:  1px 1px 0px #00FFFF;
 }
 
-h1 {
+#scoreText {
     text-align: center;
+	text-shadow:  1px 1px 0px #00FFFF;
+	font-size: 30px;
 }
+
+
 
 #grid {
     width: 100%;
@@ -29,6 +43,7 @@ table {
 	border-collapse: separate;
 	border-spacing: 3px;
 	margin: 0 auto;
+	
 }
 
 td {
@@ -37,11 +52,12 @@ td {
 	height: 70px;
 	border: 2px solid #152C59;
 	border-radius: 15px;
-    transition: .2 ease;
+    transition: .5s ease;
+	cursor: crosshair;
+	box-shadow: 0 0 1px #000000;
 }
-
-td:hover {
-	background: aquamarine;
+td:hover{
+	border: 2px solid aquamarine;
 }
 
 td div {
@@ -56,4 +72,37 @@ td div {
 	height: 40px;
 	width: 40px;
 	border: none;
+	text-shadow:  1px 1px 0px #00FFFF;
+}
+
+#lod0, #lod1, #lod3, #lod6, #lod13, #lod20, #lod24, #lod25, #lod30, #lod36, #lod40, #lod43, #lod52, #lod63, #lod64{
+	background-image: url(../img/lod.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80%;
+	display: none;
+}
+
+#paragraph{
+	color: #000000;
+	padding: 1em;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	width: 700px;
+	margin: auto;
+	display: none;
+	font-size: 110px;
+	text-align: center;
+	text-decoration: underline;
+	cursor: pointer;
+	transition: .5s ease;
+	position: absolute;
+	top: 30%;
+	left: 28%;
+}
+#paragraph:hover{
+	text-decoration-color: #00FFFF;
+	background-color: #f3f3f3;
 }
