@@ -138,3 +138,29 @@ td div {
 	text-decoration-color: #00FFFF;
 	border-radius: 50% 20% / 10% 40%;
 }
+#info-box{
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	border: 3px solid black;
+	background-color: white;	
+	width: 350px;
+	height: 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+}
+#info-box img{
+	width: 90px;
+	height: auto;
+	padding: 1em;
+	border: 3px solid black;
+	border-radius: 10%;
+}
+#info-box p{
+	width: 200px;
+	height: auto;
+	padding: 1em;
+}
