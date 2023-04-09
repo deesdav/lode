@@ -10,6 +10,10 @@
 body, html{
 	margin: auto;
 	overflow: hidden;
+	background-color: white;
+	background-image: url(../img/bg.avif);
+	background-position: center;
+	background-attachment: fixed;
 }
 
 #gameArea {
@@ -27,7 +31,7 @@ h1{
 	text-shadow:  1px 1px 0px #00FFFF;
 }
 
-#scoreText {
+#scoreText, #timerText {
     text-align: center;
 	text-shadow:  1px 1px 0px #00FFFF;
 	font-size: 30px;
@@ -50,15 +54,17 @@ td {
 	position: relative;
 	width: 70px;
 	height: 70px;
-	border: 2px solid #152C59;
+	border: 3px solid #152C59;
 	border-radius: 15px;
     transition: .5s ease;
 	cursor: crosshair;
 	box-shadow: 0 0 1px #000000;
+	background-color: white;
 }
 td:hover{
-	border: 2px solid aquamarine;
+	border: 3px solid aqua;
 }
+
 
 td div {
  	width: 70px;
@@ -69,10 +75,12 @@ td div {
 	text-align: center;
 	font-size: 20px;
 	color: #000000;
+	background-color: rgba(0, 255, 255, 0.636);
 	height: 40px;
 	width: 40px;
 	border: none;
-	text-shadow:  1px 1px 0px #00FFFF;
+	text-shadow:  1px 1px 3px #00FFFF;
+	border-radius: 5%;
 }
 
 #lod0, #lod1, #lod3, #lod6, #lod13, #lod20, #lod24, #lod25, #lod30, #lod36, #lod40, #lod43, #lod52, #lod63, #lod64{
@@ -85,11 +93,12 @@ td div {
 
 #paragraph{
 	color: #000000;
+	background-color: white;
 	padding: 1em;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid black;
+	border: 3px solid black;
 	width: 700px;
 	margin: auto;
 	display: none;
@@ -101,8 +110,15 @@ td div {
 	position: absolute;
 	top: 30%;
 	left: 28%;
+	border-radius: 5%;
 }
 #paragraph:hover{
 	text-decoration-color: #00FFFF;
-	background-color: #f3f3f3;
+	border-radius: 50% 20% / 10% 40%;
+}
+#timerText{
+	position: absolute;
+	top: 65px;
+	left: 120px;
+	font-size: xx-large;
 }

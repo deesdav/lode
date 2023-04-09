@@ -32,134 +32,147 @@ const n63 = document.getElementById("63");
 const n64 = document.getElementById("64");
 
 const score = document.getElementById("score");
+const timer = document.getElementById("timer");
 const paragraph = document.getElementById("paragraph");
 const gameArea = document.getElementById("gameArea");
+const wrong = document.getElementById("wrong");
+
+const myTimer = setInterval(() => {
+    timer.innerHTML--;
+    if (timer.innerHTML == 0) {
+        paragraph.innerHTML = `${"you lost"}`;
+        paragraph.style.display = "flex";
+        gameArea.style.display = "none";
+
+    }
+}, 1000);
+
 
 n00.onclick = () => {
     lod0.style.display = "block";
     n00.style.borderColor = "red";
     if (score.innerHTML == 0) {
-        score.innerHTML++;
+        score.innerHTML = 5;
     }
 }
 n01.onclick = () => {
-    if (score.innerHTML == 1) {
+    if (score.innerHTML == 5) {
         lod1.style.display = "block";
         n01.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 10;
     }
 }
 n03.onclick = () => {
-    if (score.innerHTML == 2) {
+    if (score.innerHTML == 10) {
         lod3.style.display = "block";
         n03.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 15;
     }
 }
 n06.onclick = () => {
-    if (score.innerHTML == 3) {
+    if (score.innerHTML == 15) {
         lod6.style.display = "block";
         n06.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 20;
     }
 }
 n13.onclick = () => {
-    if (score.innerHTML == 4) {
+    if (score.innerHTML == 20) {
         lod13.style.display = "block";
         n13.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 25;
     }
 }
 
 n20.onclick = () => {
-    if (score.innerHTML == 5) {
+    if (score.innerHTML == 25) {
         lod20.style.display = "block";
         n20.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 30;
     }
 }
 n24.onclick = () => {
-    if (score.innerHTML == 6) {
+    if (score.innerHTML == 30) {
         lod24.style.display = "block";
         n24.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 35;
     }
 }
 n25.onclick = () => {
-    if (score.innerHTML == 7) {
+    if (score.innerHTML == 35) {
         lod25.style.display = "block";
         n25.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 40;
     }
 }
 n30.onclick = () => {
-    if (score.innerHTML == 8) {
+    if (score.innerHTML == 40) {
         lod30.style.display = "block";
         n30.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 45;
     }
 }
 n36.onclick = () => {
-    if (score.innerHTML == 9) {
+    if (score.innerHTML == 45) {
         lod36.style.display = "block";
         n36.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 50;
     }
 }
 n40.onclick = () => {
-    if (score.innerHTML == 10) {
+    if (score.innerHTML == 50) {
         lod40.style.display = "block";
         n40.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 55;
     }
 }
 n43.onclick = () => {
-    if (score.innerHTML == 11) {
+    if (score.innerHTML == 55) {
         lod43.style.display = "block";
         n43.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 60;
     }
 }
 n52.onclick = () => {
-    if (score.innerHTML == 12) {
+    if (score.innerHTML == 60) {
         lod52.style.display = "block";
         n52.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 65;
     }
 }
 n63.onclick = () => {
-    if (score.innerHTML == 13) {
+    if (score.innerHTML == 65) {
         lod63.style.display = "block";
         n63.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML= 70;
     }
 }
 n64.onclick = () => {
-    if (score.innerHTML == 14) {
+    if (score.innerHTML == 70) {
         lod64.style.display = "block";
         n64.style.borderColor = "red";
 
-        score.innerHTML++;
+        score.innerHTML = 75;
     }
 
-    if (score.innerHTML == 15) {
+    if (score.innerHTML == 75) {
         paragraph.innerHTML = `${"you won"}`;
         paragraph.style.display = "flex";
         gameArea.style.display = "none";
-
+        clearInterval(myTimer);
     }
 }
 paragraph.onclick = () => {
