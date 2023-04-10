@@ -37,6 +37,7 @@ const paragraph = document.getElementById("paragraph");
 const gameArea = document.getElementById("gameArea");
 const grid = document.getElementById("grid");
 const start = document.getElementById("start");
+const doubleclick = document.getElementById("doubleclick");
 const infoBox = document.getElementById("info-box");
 const play = document.getElementById("play");
 const scoreText = document.getElementById("scoreText");
@@ -85,6 +86,7 @@ play.onclick = () => {
 n00.ondblclick = () => {
     lod0.style.display = "block";
     start.style.display = "none";
+    doubleclick.style.display = "none";
     n00.style.borderColor = "red";
     score.style.color = "gold";
     score.style.textShadow = "2px 1.5px 0px black";

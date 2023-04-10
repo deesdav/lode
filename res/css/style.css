@@ -200,4 +200,10 @@ td div {
 	height: auto;
 	width: 200px;
 }
-
+#doubleclick{
+	transform: rotate(-90deg);
+	position: absolute;
+	top: 400px;
+	right: 200px;
+	font-size: 50px;
+}
