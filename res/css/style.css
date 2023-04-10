@@ -207,3 +207,39 @@ td div {
 	right: 200px;
 	font-size: 50px;
 }
+
+@media screen and (max-width: 758px) {
+	#gameArea{
+		transform: scale(0.5);
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	#grid{
+		position: absolute;
+		left: -90px;
+	}
+	#paragraph{
+		transform: scale(0.3);
+		position: absolute;
+		left: -160px;
+	}
+	#info-box{
+		display: none;
+		visibility: hidden;
+	}
+	#doubleclick, #start{
+		display: none;
+		visibility: hidden;
+	}
+	#scoreText{
+		position: absolute;
+		top: 800px;
+		right: -100px;
+	}
+	#timerText{
+		position: absolute;
+		top: 800px;
+		left: -100px;
+	}
+}
