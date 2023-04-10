@@ -35,9 +35,13 @@ const score = document.getElementById("score");
 const timer = document.getElementById("timer");
 const paragraph = document.getElementById("paragraph");
 const gameArea = document.getElementById("gameArea");
+const grid = document.getElementById("grid");
 const start = document.getElementById("start");
 const infoBox = document.getElementById("info-box");
 const play = document.getElementById("play");
+const scoreText = document.getElementById("scoreText");
+const timerText = document.getElementById("timerText");
+const audio = document.getElementById("audio");
 
 play.onclick = () => {
     const myTimer = setInterval(() => {
@@ -48,6 +52,8 @@ play.onclick = () => {
             paragraph.style.textDecorationColor = "red";
             gameArea.style.display = "none";
             infoBox.style.display = "none";  
+            audio.pause();
+            audio.currentTime = 0;
         }
         if (score.innerHTML == 75) {
             paragraph.innerHTML = `${"you won"}`;
@@ -56,6 +62,8 @@ play.onclick = () => {
             gameArea.style.display = "none";
             infoBox.style.display = "none";
             clearInterval(timer);
+            audio.pause();
+            audio.currentTime = 0;
         }
         if (timer.innerHTML <= 10) {
             timer.style.color = "red";
@@ -64,9 +72,13 @@ play.onclick = () => {
         }
     }, 1000);
     play.style.display = "none";
-    gameArea.style.display = "flex";
+    grid.style.display = "block";
+    start.style.display = "block";
+    scoreText.style.display = "block";
+    timerText.style.display = "block";
     infoBox.style.display = "flex";
 
+    audio.play();
 }
 
 
@@ -80,7 +92,7 @@ n00.ondblclick = () => {
         score.innerHTML = 5;
     }
 }
-n01.onclick = () => {
+n01.ondblclick = () => {
     if (score.innerHTML == 5) {
         lod1.style.display = "block";
         n01.style.borderColor = "red";
@@ -96,7 +108,7 @@ n03.ondblclick = () => {
         score.innerHTML = 15;
     }
 }
-n06.onclick = () => {
+n06.ondblclick = () => {
     if (score.innerHTML == 15) {
         lod6.style.display = "block";
         n06.style.borderColor = "red";
@@ -113,7 +125,7 @@ n13.ondblclick = () => {
     }
 }
 
-n20.onclick = () => {
+n20.ondblclick = () => {
     if (score.innerHTML == 25) {
         lod20.style.display = "block";
         n20.style.borderColor = "red";
@@ -129,7 +141,7 @@ n24.ondblclick = () => {
         score.innerHTML = 35;
     }
 }
-n25.onclick = () => {
+n25.ondblclick = () => {
     if (score.innerHTML == 35) {
         lod25.style.display = "block";
         n25.style.borderColor = "red";
@@ -145,7 +157,7 @@ n30.ondblclick = () => {
         score.innerHTML = 45;
     }
 }
-n36.onclick = () => {
+n36.ondblclick = () => {
     if (score.innerHTML == 45) {
         lod36.style.display = "block";
         n36.style.borderColor = "red";
@@ -161,7 +173,7 @@ n40.ondblclick = () => {
         score.innerHTML = 55;
     }
 }
-n43.onclick = () => {
+n43.ondblclick = () => {
     if (score.innerHTML == 55) {
         lod43.style.display = "block";
         n43.style.borderColor = "red";
@@ -177,7 +189,7 @@ n52.ondblclick = () => {
         score.innerHTML = 65;
     }
 }
-n63.onclick = () => {
+n63.ondblclick = () => {
     if (score.innerHTML == 65) {
         lod63.style.display = "block";
         n63.style.borderColor = "red";
@@ -200,6 +212,8 @@ n64.ondblclick = () => {
         gameArea.style.display = "none";
         infoBox.style.display = "none";
         clearInterval(timer);
+        audio.pause();
+        audio.currentTime = 0;   
     }
 }
 paragraph.onclick = () => {
