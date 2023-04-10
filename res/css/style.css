@@ -182,8 +182,12 @@ td div {
 	padding: 50px;
 	text-align: center;
 	background-color: white;
+	animation: pulseBorder 1s alternate linear infinite;
 	
-	
+}
+@keyframes pulseBorder {
+	0%{border: 3px solid white;};
+	100%{border: 3px solid black;};
 }
 #play:hover {
 	border-radius: 50% 20% / 10% 40%;
