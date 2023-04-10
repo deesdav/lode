@@ -43,6 +43,7 @@ const play = document.getElementById("play");
 const scoreText = document.getElementById("scoreText");
 const timerText = document.getElementById("timerText");
 const audio = document.getElementById("audio");
+const headline = document.getElementById("headline");
 
 play.onclick = () => {
     const myTimer = setInterval(() => {
@@ -78,7 +79,7 @@ play.onclick = () => {
     scoreText.style.display = "block";
     timerText.style.display = "block";
     infoBox.style.display = "flex";
-
+    headline.style.fontSize = "50px";
     audio.play();
 }
 
@@ -89,7 +90,7 @@ n00.ondblclick = () => {
     doubleclick.style.display = "none";
     n00.style.borderColor = "red";
     score.style.color = "gold";
-    score.style.textShadow = "2px 1.5px 0px black";
+    score.style.textShadow = "3px 3px 1px black, 5px 5px 1px rgba(255,255,255,0.3)";
     if (score.innerHTML == 0) {
         score.innerHTML = 5;
     }

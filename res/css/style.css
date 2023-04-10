@@ -35,16 +35,18 @@ body, html{
 	0%{color: whitesmoke};
 	100%{color: black};
 }
-h1{
-	font-size: 50px;
+#headline{
+	font-size: 120px;
 	text-align: center;
-	text-shadow:  1px 1px 0px #00FFFF;
+	text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 5px rgba(255,255,255,0.3);
 	padding: 0;
 }
 
 #scoreText, #timerText {
     text-align: center;
-	text-shadow:  1px 1px 0px #00FFFF;
+	text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 5px rgba(255,255,255,0.3);
 	font-size: 30px;
 	display: none;
 }
@@ -103,7 +105,8 @@ td div {
 	height: 40px;
 	width: 40px;
 	border: none;
-	text-shadow:  1px 1px 3px #00FFFF;
+	text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 5px rgba(255,255,255,0.3);
 	border-radius: 5%;
 }
 
@@ -241,5 +244,8 @@ td div {
 		position: absolute;
 		top: 800px;
 		left: -100px;
+	}
+	#headline{
+		font-size: 70px;
 	}
 }
