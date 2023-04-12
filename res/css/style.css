@@ -67,6 +67,8 @@ body, html{
     width: 100%;
     margin: auto;
 	display: none;
+	justify-content: center;
+	align-items: center;
 	
 }
 table {
@@ -97,7 +99,7 @@ td div {
 	height: 70px;
  }
 
-.numbers, .letters {
+#numbers, #letters {
 	text-align: center;
 	font-size: 20px;
 	color: #000000;
@@ -119,25 +121,22 @@ td div {
 }
 
 #paragraph{
-	color: #000000;
-	background-color: white;
-	padding: 1em;
-	flex-wrap: wrap;
+	border-radius: 5%;
+	text-align: center;
+	display: none;
 	justify-content: center;
 	align-items: center;
-	border: 3px solid black;
+	margin: 1em auto;
+	font-size: 150px;
 	width: 700px;
-	margin: auto;
-	display: none;
-	font-size: 110px;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 5%;
+	transition: .5s ease;
+	border: 3px solid black;
+	padding: 50px;
 	text-align: center;
 	text-decoration: underline;
-	cursor: pointer;
-	transition: .5s ease;
-	position: absolute;
-	top: 30%;
-	left: 28%;
-	border-radius: 5%;
 }
 #paragraph:hover{
 	text-decoration-color: #00FFFF;
@@ -218,14 +217,11 @@ td div {
 		top: 0px;
 		left: 0px;
 	}
-	#grid{
-		position: absolute;
-		left: -90px;
-	}
+	
 	#paragraph{
-		transform: scale(0.3);
-		position: absolute;
-		left: -160px;
+		transform: scale(0.8);
+		width: 500px;
+		
 	}
 	#info-box{
 		display: none;

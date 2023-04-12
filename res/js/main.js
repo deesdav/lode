@@ -44,6 +44,11 @@ const scoreText = document.getElementById("scoreText");
 const timerText = document.getElementById("timerText");
 const audio = document.getElementById("audio");
 const headline = document.getElementById("headline");
+const numbers = document.getElementById("numbers");
+const letters = document.getElementById("letters");
+
+
+
 
 play.onclick = () => {
     const myTimer = setInterval(() => {
@@ -53,7 +58,7 @@ play.onclick = () => {
             paragraph.style.display = "flex";
             paragraph.style.textDecorationColor = "red";
             gameArea.style.display = "none";
-            infoBox.style.display = "none";  
+            infoBox.style.display = "none";
             audio.pause();
             audio.currentTime = 0;
         }
@@ -69,7 +74,7 @@ play.onclick = () => {
         }
         if (timer.innerHTML <= 10) {
             timer.style.color = "red";
-        } else{
+        } else {
             timer.style.color = "black";
         }
     }, 1000);
@@ -81,10 +86,12 @@ play.onclick = () => {
     infoBox.style.display = "flex";
     headline.style.fontSize = "50px";
     audio.play();
+
+    changeColor();
 }
 
 
-n00.ondblclick = () => {
+n00.onclick = () => {
     lod0.style.display = "block";
     start.style.display = "none";
     doubleclick.style.display = "none";
@@ -93,121 +100,133 @@ n00.ondblclick = () => {
     score.style.textShadow = "3px 3px 1px black, 5px 5px 1px rgba(255,255,255,0.3)";
     if (score.innerHTML == 0) {
         score.innerHTML = 5;
+       
     }
 }
-n01.ondblclick = () => {
-    if (score.innerHTML == 5) {
-        lod1.style.display = "block";
-        n01.style.borderColor = "red";
-
+n01.onclick = () => {
+    if (score.innerHTML >= 5 && score.innerHTML <=10){
         score.innerHTML = 10;
+        lod1.style.display = "block";
+    n01.style.borderColor = "red";
+    }
+    
+}
+n03.onclick = () => {
+    if (score.innerHTML >= 10 && score.innerHTML <=10) {
+        score.innerHTML =  15;
+       
+    lod3.style.display = "block";
+    n03.style.borderColor = "red";
     }
 }
-n03.ondblclick = () => {
-    if (score.innerHTML == 10) {
-        lod3.style.display = "block";
-        n03.style.borderColor = "red";
-
-        score.innerHTML = 15;
-    }
-}
-n06.ondblclick = () => {
-    if (score.innerHTML == 15) {
+n06.onclick = () => {
+    if (score.innerHTML >= 15 && score.innerHTML <=20){
+        score.innerHTML =  20;
+        
         lod6.style.display = "block";
         n06.style.borderColor = "red";
-
-        score.innerHTML = 20;
     }
+
 }
-n13.ondblclick = () => {
-    if (score.innerHTML == 20) {
+n13.onclick = () => {
+    if (score.innerHTML >= 20 && score.innerHTML <=25) {
+        score.innerHTML =  25;
+       
         lod13.style.display = "block";
         n13.style.borderColor = "red";
-
-        score.innerHTML = 25;
     }
+   
 }
 
-n20.ondblclick = () => {
-    if (score.innerHTML == 25) {
+n20.onclick = () => {
+    if (score.innerHTML >= 25 && score.innerHTML <=30){
+        score.innerHTML =  30;
+        
         lod20.style.display = "block";
         n20.style.borderColor = "red";
-
-        score.innerHTML = 30;
     }
+   
 }
-n24.ondblclick = () => {
-    if (score.innerHTML == 30) {
+n24.onclick = () => {
+    if (score.innerHTML >= 30 && score.innerHTML <=35) {
+        score.innerHTML =  35;
+       
         lod24.style.display = "block";
         n24.style.borderColor = "red";
-
-        score.innerHTML = 35;
     }
+   
 }
-n25.ondblclick = () => {
-    if (score.innerHTML == 35) {
+n25.onclick = () => {
+    if (score.innerHTML >= 35 && score.innerHTML <=40){
+        score.innerHTML =  40;
+        
         lod25.style.display = "block";
         n25.style.borderColor = "red";
-
-        score.innerHTML = 40;
     }
+   
 }
-n30.ondblclick = () => {
-    if (score.innerHTML == 40) {
+n30.onclick = () => {
+    if (score.innerHTML >= 40 && score.innerHTML <=45) {
+        score.innerHTML =  45;
+       
         lod30.style.display = "block";
         n30.style.borderColor = "red";
-
-        score.innerHTML = 45;
     }
+   
 }
-n36.ondblclick = () => {
-    if (score.innerHTML == 45) {
+n36.onclick = () => {
+    if (score.innerHTML >= 45 && score.innerHTML <=50){
+        score.innerHTML =  50;
+        
         lod36.style.display = "block";
         n36.style.borderColor = "red";
-
-        score.innerHTML = 50;
     }
+  
 }
-n40.ondblclick = () => {
-    if (score.innerHTML == 50) {
+n40.onclick = () => {
+    if (score.innerHTML >= 50 && score.innerHTML <=55) {
+        score.innerHTML =  55;
+       
         lod40.style.display = "block";
         n40.style.borderColor = "red";
-
-        score.innerHTML = 55;
     }
+  
 }
-n43.ondblclick = () => {
-    if (score.innerHTML == 55) {
+n43.onclick = () => {
+    if (score.innerHTML >= 55 && score.innerHTML <=60){
+        score.innerHTML =  60;
+        
         lod43.style.display = "block";
-        n43.style.borderColor = "red";
-
-        score.innerHTML = 60;
+    n43.style.borderColor = "red";
     }
+    
 }
-n52.ondblclick = () => {
-    if (score.innerHTML == 60) {
+n52.onclick = () => {
+    if (score.innerHTML >= 60 && score.innerHTML <=65) {
+        score.innerHTML = 65;
+       
         lod52.style.display = "block";
         n52.style.borderColor = "red";
-
-        score.innerHTML = 65;
     }
+ 
 }
-n63.ondblclick = () => {
-    if (score.innerHTML == 65) {
+n63.onclick = () => {
+    if (score.innerHTML >= 65 && score.innerHTML <=70){
+        score.innerHTML =  70;
+        
         lod63.style.display = "block";
         n63.style.borderColor = "red";
-
-        score.innerHTML= 70;
     }
+
 }
-n64.ondblclick = () => {
-    if (score.innerHTML == 70) {
+n64.onclick = () => {
+    if (score.innerHTML >= 70 && score.innerHTML <= 75) {
+        score.innerHTML =  75;
+       
         lod64.style.display = "block";
         n64.style.borderColor = "red";
-
-        score.innerHTML = 75;
     }
-
+   
     if (score.innerHTML == 75) {
         paragraph.innerHTML = `${"you won"}`;
         paragraph.style.display = "flex";
@@ -216,7 +235,7 @@ n64.ondblclick = () => {
         infoBox.style.display = "none";
         clearInterval(timer);
         audio.pause();
-        audio.currentTime = 0;   
+        audio.currentTime = 0;
     }
 }
 paragraph.onclick = () => {
