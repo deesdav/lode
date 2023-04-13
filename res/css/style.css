@@ -27,7 +27,7 @@ body, html{
 #start{
 	position: absolute;
 	top: 194px;
-	left: 430px;
+	left: 395px;
 	animation: pulse 1s alternate linear infinite;
 	display: none;
 	font-size: 20px;
