@@ -53,6 +53,10 @@ const creator = document.getElementById("creator");
 creatorHeadline.onclick = () => {
     creatorContent.style.display = "block";
     creatorHeadline.style.display = "none";
+    setTimeout(() => {
+        creatorHeadline.style.display = "block";
+        creatorContent.style.display = "none";
+    }, 5000);   
   }
 
 let timerValue = 1000;
