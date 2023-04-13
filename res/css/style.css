@@ -140,6 +140,7 @@ td div {
 	padding: 50px;
 	text-align: center;
 	text-decoration: underline;
+	background-color: white;
 }
 #paragraph:hover{
 	text-decoration-color: #00FFFF;
