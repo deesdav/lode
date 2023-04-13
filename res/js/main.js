@@ -46,6 +46,14 @@ const audio = document.getElementById("audio");
 const headline = document.getElementById("headline");
 const letters = document.getElementsByClassName("letter");
 const numbers = document.getElementsByClassName("number");
+const creatorHeadline = document.getElementById("creatorHeadline");
+const creatorContent = document.getElementById("creatorContent");
+const creator = document.getElementById("creator");
+
+creatorHeadline.onclick = () => {
+    creatorContent.style.display = "block";
+    creatorHeadline.style.display = "none";
+  }
 
 let timerValue = 1000;
 

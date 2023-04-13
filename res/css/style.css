@@ -214,6 +214,51 @@ td div {
 	font-size: 50px;
 }
 
+#creator{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: left;
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+    gap: 0px;
+
+}
+#creator .fa-brands {
+	position: relative	;
+    left: 20px;
+    bottom: 20px;
+   height: 60px;
+   width: 60px;
+    height: auto;
+    color: rgb(0, 0, 0);
+    transition: .5s;
+	font-size: x-large;
+}
+#creator .fa-brands:hover {
+    color: aqua;
+}
+#creator a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+#creatorHeadline{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 2px;
+    left: 20px;
+    transition: .5s ease;
+}
+#creatorHeadline:hover{
+   color: aqua;
+}
+#creatorContent{
+    display: none;
+}
+
 @media screen and (max-width: 758px) {
 	#gameArea{
 		transform: scale(0.5);
