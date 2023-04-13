@@ -42,6 +42,7 @@ body, html{
 	text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
     0px -4px 5px rgba(255,255,255,0.3);
 	padding: 0;
+	cursor: pointer;
 }
 
 #scoreText, #timerText {

@@ -277,6 +277,11 @@ n64.onclick = () => {
 paragraph.onclick = () => {
     window.location.reload();
 }
+
+headline.onclick = () => {
+    window.location.reload();
+}
+
 console.log(timerValue);
 
 
