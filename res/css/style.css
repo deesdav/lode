@@ -27,9 +27,10 @@ body, html{
 #start{
 	position: absolute;
 	top: 194px;
-	left: 410px;
+	left: 430px;
 	animation: pulse 1s alternate linear infinite;
 	display: none;
+	font-size: 20px;
 }
 @keyframes pulse {
 	0%{color: whitesmoke};
@@ -90,8 +91,9 @@ td {
 	background-color: white;
 }
 td:hover{
-	border: 3px solid aqua;
+	border: 3px solid gold;
 }
+
 
 
 td div {
@@ -99,7 +101,7 @@ td div {
 	height: 70px;
  }
 
-#numbers, #letters {
+.number, .letter {
 	text-align: center;
 	font-size: 20px;
 	color: #000000;

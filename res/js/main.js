@@ -44,9 +44,43 @@ const scoreText = document.getElementById("scoreText");
 const timerText = document.getElementById("timerText");
 const audio = document.getElementById("audio");
 const headline = document.getElementById("headline");
-const numbers = document.getElementById("numbers");
-const letters = document.getElementById("letters");
+const letters = document.getElementsByClassName("letter");
+const numbers = document.getElementsByClassName("number");
 
+let timerValue = 1000;
+
+const randomNumber = (maximum, minimum) => {
+    const myNum = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+    return myNum;
+}
+
+const changeSquareColor = () => {
+    const r = randomNumber(0, 255);
+    const g = randomNumber(0, 255);
+    const b = randomNumber(0, 255);
+    console.log(randomNumber(0, 255));
+    [...letters].forEach((letter) => {
+        letter.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    });
+    [...numbers].forEach((number) => {
+        number.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    });
+    if (r <= 100 || g<= 100 || b <= 100) {
+        [...letters].forEach((letter) => {
+            letter.style.color = "white";
+        });
+        [...numbers].forEach((number) => {
+            number.style.color = "white";
+        });
+    } else{
+        [...letters].forEach((letter) => {
+            letter.style.color = "black";
+        });
+        [...numbers].forEach((number) => {
+            number.style.color = "black";
+        });
+    }
+}
 
 
 
@@ -61,6 +95,7 @@ play.onclick = () => {
             infoBox.style.display = "none";
             audio.pause();
             audio.currentTime = 0;
+            headline.style.fontSize = "120px";
         }
         if (score.innerHTML == 75) {
             paragraph.innerHTML = `${"you won"}`;
@@ -71,13 +106,14 @@ play.onclick = () => {
             clearInterval(timer);
             audio.pause();
             audio.currentTime = 0;
+            headline.style.fontSize = "120px";
         }
-        if (timer.innerHTML <= 10) {
+        if (timer.innerHTML <= 5) {
             timer.style.color = "red";
         } else {
             timer.style.color = "black";
         }
-    }, 1000);
+    }, timerValue);
     play.style.display = "none";
     grid.style.display = "block";
     start.style.display = "block";
@@ -86,8 +122,7 @@ play.onclick = () => {
     infoBox.style.display = "flex";
     headline.style.fontSize = "50px";
     audio.play();
-
-    changeColor();
+    changeSquareColor();
 }
 
 
@@ -100,120 +135,121 @@ n00.onclick = () => {
     score.style.textShadow = "3px 3px 1px black, 5px 5px 1px rgba(255,255,255,0.3)";
     if (score.innerHTML == 0) {
         score.innerHTML = 5;
-       
+        timerValue -= 20;
     }
 }
 n01.onclick = () => {
-    if (score.innerHTML >= 5 && score.innerHTML <=10){
+    if (score.innerHTML >= 5 && score.innerHTML <= 10) {
         score.innerHTML = 10;
         lod1.style.display = "block";
-    n01.style.borderColor = "red";
+        n01.style.borderColor = "red";
+        timerValue -= 100;
     }
-    
+
 }
 n03.onclick = () => {
-    if (score.innerHTML >= 10 && score.innerHTML <=10) {
-        score.innerHTML =  15;
-       
-    lod3.style.display = "block";
-    n03.style.borderColor = "red";
+    if (score.innerHTML >= 10 && score.innerHTML <= 10) {
+        score.innerHTML = 15;
+
+        lod3.style.display = "block";
+        n03.style.borderColor = "red";
     }
 }
 n06.onclick = () => {
-    if (score.innerHTML >= 15 && score.innerHTML <=20){
-        score.innerHTML =  20;
-        
+    if (score.innerHTML >= 15 && score.innerHTML <= 20) {
+        score.innerHTML = 20;
+        timerValue -= 100;
         lod6.style.display = "block";
         n06.style.borderColor = "red";
     }
 
 }
 n13.onclick = () => {
-    if (score.innerHTML >= 20 && score.innerHTML <=25) {
-        score.innerHTML =  25;
-       
+    if (score.innerHTML >= 20 && score.innerHTML <= 25) {
+        score.innerHTML = 25;
+        timerValue -= 100;
         lod13.style.display = "block";
         n13.style.borderColor = "red";
     }
-   
+
 }
 
 n20.onclick = () => {
-    if (score.innerHTML >= 25 && score.innerHTML <=30){
-        score.innerHTML =  30;
-        
+    if (score.innerHTML >= 25 && score.innerHTML <= 30) {
+        score.innerHTML = 30;
+        timerValue -= 100;
         lod20.style.display = "block";
         n20.style.borderColor = "red";
     }
-   
+
 }
 n24.onclick = () => {
-    if (score.innerHTML >= 30 && score.innerHTML <=35) {
-        score.innerHTML =  35;
-       
+    if (score.innerHTML >= 30 && score.innerHTML <= 35) {
+        score.innerHTML = 35;
+        timerValue -= 100;
         lod24.style.display = "block";
         n24.style.borderColor = "red";
     }
-   
+
 }
 n25.onclick = () => {
-    if (score.innerHTML >= 35 && score.innerHTML <=40){
-        score.innerHTML =  40;
-        
+    if (score.innerHTML >= 35 && score.innerHTML <= 40) {
+        score.innerHTML = 40;
+        timerValue -= 100;
         lod25.style.display = "block";
         n25.style.borderColor = "red";
     }
-   
+
 }
 n30.onclick = () => {
-    if (score.innerHTML >= 40 && score.innerHTML <=45) {
-        score.innerHTML =  45;
-       
+    if (score.innerHTML >= 40 && score.innerHTML <= 45) {
+        score.innerHTML = 45;
+        timerValue -= 100;
         lod30.style.display = "block";
         n30.style.borderColor = "red";
     }
-   
+
 }
 n36.onclick = () => {
-    if (score.innerHTML >= 45 && score.innerHTML <=50){
-        score.innerHTML =  50;
-        
+    if (score.innerHTML >= 45 && score.innerHTML <= 50) {
+        score.innerHTML = 50;
+        timerValue -= 100;
         lod36.style.display = "block";
         n36.style.borderColor = "red";
     }
-  
+
 }
 n40.onclick = () => {
-    if (score.innerHTML >= 50 && score.innerHTML <=55) {
-        score.innerHTML =  55;
-       
+    if (score.innerHTML >= 50 && score.innerHTML <= 55) {
+        score.innerHTML = 55;
+        timerValue -= 100;
         lod40.style.display = "block";
         n40.style.borderColor = "red";
     }
-  
+
 }
 n43.onclick = () => {
-    if (score.innerHTML >= 55 && score.innerHTML <=60){
-        score.innerHTML =  60;
-        
+    if (score.innerHTML >= 55 && score.innerHTML <= 60) {
+        score.innerHTML = 60;
+        timerValue -= 100;
         lod43.style.display = "block";
-    n43.style.borderColor = "red";
+        n43.style.borderColor = "red";
     }
-    
+
 }
 n52.onclick = () => {
-    if (score.innerHTML >= 60 && score.innerHTML <=65) {
+    if (score.innerHTML >= 60 && score.innerHTML <= 65) {
         score.innerHTML = 65;
-       
+        timerValue -= 100;
         lod52.style.display = "block";
         n52.style.borderColor = "red";
     }
- 
+
 }
 n63.onclick = () => {
-    if (score.innerHTML >= 65 && score.innerHTML <=70){
-        score.innerHTML =  70;
-        
+    if (score.innerHTML >= 65 && score.innerHTML <= 70) {
+        score.innerHTML = 70;
+        timerValue -= 100;
         lod63.style.display = "block";
         n63.style.borderColor = "red";
     }
@@ -221,12 +257,12 @@ n63.onclick = () => {
 }
 n64.onclick = () => {
     if (score.innerHTML >= 70 && score.innerHTML <= 75) {
-        score.innerHTML =  75;
-       
+        score.innerHTML = 75;
+        timerValue -= 100;
         lod64.style.display = "block";
         n64.style.borderColor = "red";
     }
-   
+
     if (score.innerHTML == 75) {
         paragraph.innerHTML = `${"you won"}`;
         paragraph.style.display = "flex";
@@ -241,6 +277,7 @@ n64.onclick = () => {
 paragraph.onclick = () => {
     window.location.reload();
 }
+console.log(timerValue);
 
 
 
