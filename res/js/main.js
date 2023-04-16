@@ -56,8 +56,8 @@ creatorHeadline.onclick = () => {
     setTimeout(() => {
         creatorHeadline.style.display = "block";
         creatorContent.style.display = "none";
-    }, 5000);   
-  }
+    }, 5000);
+}
 
 let timerValue = 1000;
 
@@ -77,14 +77,14 @@ const changeSquareColor = () => {
     [...numbers].forEach((number) => {
         number.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
-    if (r <= 100 || g<= 100 || b <= 100) {
+    if (r <= 100 || g <= 100 || b <= 100) {
         [...letters].forEach((letter) => {
             letter.style.color = "white";
         });
         [...numbers].forEach((number) => {
             number.style.color = "white";
         });
-    } else{
+    } else {
         [...letters].forEach((letter) => {
             letter.style.color = "black";
         });
