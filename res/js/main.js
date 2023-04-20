@@ -51,7 +51,7 @@ const creatorContent = document.getElementById("creatorContent");
 const creator = document.getElementById("creator");
 
 window.onload = () => {
-    const randomTrack = Math.floor(Math.random() * 4);
+    const randomTrack = Math.floor(Math.random() * 5);
     if (randomTrack >= 0 && randomTrack <= 1) {
         audio.src = "./res/audio/already-rich-slowed-reverb.mp3";
     }
@@ -61,7 +61,11 @@ window.onload = () => {
     if (randomTrack >= 2 && randomTrack <= 3) {
         audio.src = "./res/audio/travis-scott-lyrics.mp3";
     }
+    if (randomTrack >= 3 && randomTrack <= 4) {
+        audio.src = "./res/audio/split-sped-up.mp3";
+    }
 }
+
 
 creatorHeadline.onclick = () => {
     creatorContent.style.display = "block";
