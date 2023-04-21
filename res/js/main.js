@@ -94,7 +94,7 @@ const changeSquareColor = () => {
     [...numbers].forEach((number) => {
         number.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
-    if (r <= 100 || g <= 100 || b <= 100) {
+    if (r <= 128 || g <= 128 || b <= 128) {
         [...letters].forEach((letter) => {
             letter.style.color = "white";
         });
