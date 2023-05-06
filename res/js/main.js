@@ -89,9 +89,16 @@ const creatorHeadline = document.getElementById("creatorHeadline");
 const creatorContent = document.getElementById("creatorContent");
 const creator = document.getElementById("creator");
 
+/* custom cursor
+const cursor = document.querySelector('.cursor')
 
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: " +(e.pageY + 10)+"px; left: " + (e.pageX + 10) + "px;")
+});
+*/
 wrong1.onclick = () => {
     wrong1.style.backgroundColor = "red";
+    document.cursor.style
 }
 wrong2.onclick = () => {
     wrong2.style.backgroundColor = "red";

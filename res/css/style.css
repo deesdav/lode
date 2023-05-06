@@ -16,7 +16,11 @@ html {
 	background-image: url(../img/bg.avif);
 	background-position: center;
 	background-attachment: fixed;
+
 }
+
+
+
 
 #gameArea {
 	margin: auto;
@@ -24,7 +28,7 @@ html {
 	align-items: center;
 	width: 100%;
 	height: 100%;
-
+	
 }
 
 #start {
@@ -56,7 +60,6 @@ html {
 	text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
 		0px -4px 5px rgba(255, 255, 255, 0.3);
 	padding: 0;
-	cursor: pointer;
 }
 
 #scoreText,
@@ -105,9 +108,9 @@ td {
 	border: 3px solid #152C59;
 	border-radius: 15px;
 	transition: .5s ease;
-	cursor: crosshair;
 	box-shadow: 0 0 1px #000000;
 	background-color: white;
+	cursor: crosshair;
 }
 
 td:hover {
@@ -166,7 +169,6 @@ td div {
 	margin: 1em auto;
 	font-size: 150px;
 	width: 700px;
-	cursor: pointer;
 	overflow: hidden;
 	border-radius: 5%;
 	transition: .5s ease;
@@ -175,6 +177,7 @@ td div {
 	text-align: center;
 	text-decoration: underline;
 	background-color: white;
+	cursor: pointer;
 }
 
 #paragraph:hover {
@@ -219,7 +222,6 @@ td div {
 	margin: 1em auto;
 	font-size: 150px;
 	width: 350px;
-	cursor: pointer;
 	overflow: hidden;
 	border-radius: 5%;
 	transition: .5s ease;
@@ -228,8 +230,9 @@ td div {
 	text-align: center;
 	background-color: white;
 	animation: pulseBorder 1s alternate linear infinite;
-
+	cursor: pointer;
 }
+
 
 @keyframes pulseBorder {
 	0% {
@@ -248,6 +251,7 @@ td div {
 #play:hover {
 	border-radius: 50% 20% / 10% 40%;
 }
+
 
 #audio {
 	position: absolute;
@@ -275,7 +279,7 @@ td div {
 	left: 20px;
 	bottom: 0px;
 	gap: 0px;
-
+	cursor: pointer;
 }
 
 #creator .fa-brands {
@@ -288,6 +292,8 @@ td div {
 	color: rgb(0, 0, 0);
 	transition: .5s;
 	font-size: x-large;
+	cursor: pointer;
+	
 }
 
 #creator .fa-brands:hover {
@@ -301,12 +307,12 @@ td div {
 }
 
 #creatorHeadline {
-	cursor: pointer;
 	color: rgb(0, 0, 0);
 	position: absolute;
 	bottom: 2px;
 	left: 20px;
 	transition: .5s ease;
+	
 }
 
 #creatorHeadline:hover {
@@ -316,6 +322,9 @@ td div {
 #creatorContent {
 	display: none;
 }
+
+
+
 
 @media screen and (max-width: 758px) {
 	#gameArea {
