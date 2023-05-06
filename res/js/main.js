@@ -1,3 +1,39 @@
+const wrong1 = document.getElementById("wrong1");
+const wrong2 = document.getElementById("wrong2");
+const wrong3 = document.getElementById("wrong3");
+const wrong4 = document.getElementById("wrong4");
+const wrong5 = document.getElementById("wrong5");
+const wrong6 = document.getElementById("wrong6");
+const wrong7 = document.getElementById("wrong7");
+const wrong8 = document.getElementById("wrong8");
+const wrong9 = document.getElementById("wrong9");
+const wrong10 = document.getElementById("wrong10");
+const wrong11 = document.getElementById("wrong11");
+const wrong12 = document.getElementById("wrong12");
+const wrong13 = document.getElementById("wrong13");
+const wrong14 = document.getElementById("wrong14");
+const wrong15 = document.getElementById("wrong15");
+const wrong16 = document.getElementById("wrong16");
+const wrong17 = document.getElementById("wrong17");
+const wrong18 = document.getElementById("wrong18");
+const wrong19 = document.getElementById("wrong19");
+const wrong20 = document.getElementById("wrong20");
+const wrong21 = document.getElementById("wrong21");
+const wrong22 = document.getElementById("wrong22");
+const wrong23 = document.getElementById("wrong23");
+const wrong24 = document.getElementById("wrong24");
+const wrong25 = document.getElementById("wrong25");
+const wrong26 = document.getElementById("wrong26");
+const wrong27 = document.getElementById("wrong27");
+const wrong28 = document.getElementById("wrong28");
+const wrong29 = document.getElementById("wrong29");
+const wrong30 = document.getElementById("wrong30");
+const wrong31 = document.getElementById("wrong31");
+const wrong32 = document.getElementById("wrong32");
+const wrong33 = document.getElementById("wrong33");
+const wrong34 = document.getElementById("wrong34");
+
+
 const lod0 = document.getElementById("lod0");
 const lod1 = document.getElementById("lod1");
 const lod3 = document.getElementById("lod3");
@@ -31,6 +67,7 @@ const n52 = document.getElementById("52");
 const n63 = document.getElementById("63");
 const n64 = document.getElementById("64");
 
+
 const score = document.getElementById("score");
 const timer = document.getElementById("timer");
 const paragraph = document.getElementById("paragraph");
@@ -43,12 +80,121 @@ const play = document.getElementById("play");
 const scoreText = document.getElementById("scoreText");
 const timerText = document.getElementById("timerText");
 const audio = document.getElementById("audio");
+const audioWin = document.getElementById("audioWin");
+const audioLoss = document.getElementById("audioLoss");
 const headline = document.getElementById("headline");
 const letters = document.getElementsByClassName("letter");
 const numbers = document.getElementsByClassName("number");
 const creatorHeadline = document.getElementById("creatorHeadline");
 const creatorContent = document.getElementById("creatorContent");
 const creator = document.getElementById("creator");
+document.
+
+
+
+wrong1.onclick = () => {
+    wrong1.style.backgroundColor = "red";
+}
+wrong2.onclick = () => {
+    wrong2.style.backgroundColor = "red";
+}
+wrong3.onclick = () => {
+    wrong3.style.backgroundColor = "red";
+}
+wrong4.onclick = () => {
+    wrong4.style.backgroundColor = "red";
+}
+wrong5.onclick = () => {
+    wrong5.style.backgroundColor = "red";
+}
+wrong6.onclick = () => {
+    wrong6.style.backgroundColor = "red";
+}
+wrong7.onclick = () => {
+    wrong7.style.backgroundColor = "red";
+}
+wrong8.onclick = () => {
+    wrong8.style.backgroundColor = "red";
+}
+wrong9.onclick = () => {
+    wrong9.style.backgroundColor = "red";
+}
+wrong10.onclick = () => {
+    wrong10.style.backgroundColor = "red";
+}
+wrong11.onclick = () => {
+    wrong11.style.backgroundColor = "red";
+}
+wrong12.onclick = () => {
+    wrong12.style.backgroundColor = "red";
+}
+wrong13.onclick = () => {
+    wrong13.style.backgroundColor = "red";
+}
+wrong14.onclick = () => {
+    wrong14.style.backgroundColor = "red";
+}
+wrong15.onclick = () => {
+    wrong15.style.backgroundColor = "red";
+}
+wrong16.onclick = () => {
+    wrong16.style.backgroundColor = "red";
+}
+wrong17.onclick = () => {
+    wrong17.style.backgroundColor = "red";
+}
+wrong18.onclick = () => {
+    wrong18.style.backgroundColor = "red";
+}
+wrong19.onclick = () => {
+    wrong19.style.backgroundColor = "red";
+}
+wrong20.onclick = () => {
+    wrong20.style.backgroundColor = "red";
+}
+wrong21.onclick = () => {
+    wrong21.style.backgroundColor = "red";
+}
+wrong22.onclick = () => {
+    wrong22.style.backgroundColor = "red";
+}
+wrong23.onclick = () => {
+    wrong23.style.backgroundColor = "red";
+}
+wrong24.onclick = () => {
+    wrong24.style.backgroundColor = "red";
+}
+wrong25.onclick = () => {
+    wrong25.style.backgroundColor = "red";
+}
+wrong26.onclick = () => {
+    wrong26.style.backgroundColor = "red";
+}
+wrong27.onclick = () => {
+    wrong27.style.backgroundColor = "red";
+}
+wrong28.onclick = () => {
+    wrong28.style.backgroundColor = "red";
+}
+wrong29.onclick = () => {
+    wrong29.style.backgroundColor = "red";
+}
+wrong30.onclick = () => {
+    wrong30.style.backgroundColor = "red";
+}
+wrong31.onclick = () => {
+    wrong31.style.backgroundColor = "red";
+}
+wrong32.onclick = () => {
+    wrong32.style.backgroundColor = "red";
+}
+wrong33.onclick = () => {
+    wrong33.style.backgroundColor = "red";
+}
+wrong34.onclick = () => {
+    wrong34.style.backgroundColor = "red";
+}
+
 
 window.onload = () => {
     const randomTrack = Math.floor(Math.random() * 5);
@@ -126,6 +272,15 @@ play.onclick = () => {
             audio.currentTime = 0;
             headline.style.fontSize = "120px";
             document.title = "YOU LOST";
+            audioWin.pause();
+            audioWin.currentTime = 0;
+
+
+            audioLoss.play();
+            setTimeout(() => {
+                audioLoss.pause();
+                audioLoss.currentTime = 0;
+            }, 5000);
         }
         if (score.innerHTML == 75) {
             paragraph.innerHTML = `${"you won"}`;
@@ -138,6 +293,15 @@ play.onclick = () => {
             audio.currentTime = 0;
             headline.style.fontSize = "120px";
             document.title = "YOU WON";
+            audioLoss.pause();
+            audioLoss.currentTime = 0;
+
+
+            audioWin.play();
+            setTimeout(() => {
+                audioWin.pause();
+                audioWin.currentTime = 0;
+            }, 5000);
         }
         if (timer.innerHTML <= 5) {
             timer.style.color = "red";
@@ -319,6 +483,14 @@ n64.onclick = () => {
         clearInterval(timer);
         audio.pause();
         audio.currentTime = 0;
+        audioLoss.pause();
+        audioLoss.currentTime = 0;
+
+        audioWin.play();
+        setTimeout(() => {
+            audioWin.pause();
+            audioWin.currentTime = 0;
+        }, 5000);
     }
 }
 paragraph.onclick = () => {

@@ -15,6 +15,8 @@
     <h1 id="headline"><abbr style="text-decoration: none;" title="from top to bottom"> BATTLESHIPS </abbr></h1>
 
     <audio id="audio" src=""></audio>
+    <audio id="audioWin" src="./res/audio/win.mp3"></audio>
+    <audio id="audioLoss" src="./res/audio/loss.mp3"></audio>
     <div id="gameArea">
         <div id="play"><abbr style="text-decoration: none;" title="from top to bottom"> play </abbr></div>
         <div id="scoreText">score: <span id="score">0</span> pts</div>
@@ -42,16 +44,16 @@
                     <td id="01">
                         <div id="lod1"></div>
                     </td>
-                    <td>
+                    <td id="wrong1">
                         <div id="02"></div>
                     </td>
                     <td id="03">
                         <div id="lod3"></div>
                     </td>
-                    <td>
+                    <td id="wrong2">
                         <div id="02"></div>
                     </td>
-                    <td>
+                    <td id="wrong3">
                         <div id="05"></div>
                     </td>
                     <td id="06">
@@ -60,25 +62,25 @@
                 </tr>
                 <tr>
                     <th class="letter">B</th>
-                    <td>
+                    <td id="wrong4">
                         <div id="10"></div>
                     </td>
-                    <td>
+                    <td id="wrong5">
                         <div id="11"></div>
                     </td>
-                    <td>
+                    <td id="wrong6">
                         <div id="12"></div>
                     </td>
                     <td id="13">
                         <div id="lod13"></div>
                     </td>
-                    <td>
+                    <td id="wrong7">
                         <div id="14"></div>
                     </td>
-                    <td>
+                    <td id="wrong8">
                         <div id="15"></div>
                     </td>
-                    <td>
+                    <td id="wrong9">
                         <div id="16"></div>
                     </td>
                 <tr>
@@ -86,13 +88,13 @@
                     <td id="20">
                         <div id="lod20"></div>
                     </td>
-                    <td>
+                    <td id="wrong10">
                         <div id="21"></div>
                     </td>
-                    <td>
+                    <td id="wrong11">
                         <div id="22"></div>
                     </td>
-                    <td>
+                    <td id="wrong12">
                         <div id="23"></div>
                     </td>
                     <td id="24">
@@ -101,7 +103,7 @@
                     <td id="25">
                         <div id="lod25"></div>
                     </td>
-                    <td>
+                    <td id="wrong13">
                         <div id="26"></div>
                     </td>
                 </tr>
@@ -111,19 +113,19 @@
                     <td id="30">
                         <div id="lod30"></div>
                     </td>
-                    <td>
+                    <td id="wrong14">
                         <div id="31"></div>
                     </td>
-                    <td>
+                    <td id="wrong15">
                         <div id="32"></div>
                     </td>
-                    <td>
+                    <td id="wrong16">
                         <div id="33"></div>
                     </td>
-                    <td>
+                    <td id="wrong17">
                         <div id="34"></div>
                     </td>
-                    <td>
+                    <td id="wrong18">
                         <div id="35"></div>
                     </td>
                     <td id="36">
@@ -135,58 +137,58 @@
                     <td id="40">
                         <div id="lod40"></div>
                     </td>
-                    <td>
+                    <td id="wrong19">
                         <div id="41"></div>
                     </td>
-                    <td>
+                    <td id="wrong20">
                         <div id="42"></div>
                     </td>
                     <td id="43">
                         <div id="lod43"></div>
                     </td>
-                    <td>
+                    <td id="wrong21">
                         <div id="44"></div>
                     </td>
-                    <td>
+                    <td id="wrong22">
                         <div id="45"></div>
                     </td>
-                    <td>
+                    <td id="wrong23">
                         <div id="46"></div>
                     </td>
                 </tr>
                 <tr>
                     <th class="letter">F</td>
-                    <td>
+                    <td id="wrong24">
                         <div id="50"></div>
                     </td>
-                    <td>
+                    <td id="wrong25">
                         <div id="51"></div>
                     </td>
                     <td id="52">
                         <div id="lod52"></div>
                     </td>
-                    <td>
+                    <td id="wrong26">
                         <div id="53"></div>
                     </td>
-                    <td>
+                    <td id="wrong27">
                         <div id="54"></div>
                     </td>
-                    <td>
+                    <td id="wrong28">
                         <div id="55"></div>
                     </td>
-                    <td>
+                    <td id="wrong29">
                         <div id="56"></div>
                     </td>
                 </tr>
                 <tr>
                     <th class="letter">G</td>
-                    <td>
+                    <td id="wrong30">
                         <div id="60"></div>
                     </td>
-                    <td>
+                    <td id="wrong31">
                         <div id="61"></div>
                     </td>
-                    <td>
+                    <td id="wrong32">
                         <div id="62"></div>
                     </td>
                     <td id="63">
@@ -195,10 +197,10 @@
                     <td id="64">
                         <div id="lod64"></div>
                     </td>
-                    <td>
+                    <td id="wrong33">
                         <div id="65"></div>
                     </td>
-                    <td>
+                    <td id="wrong34">
                         <div id="66"></div>
                     </td>
                 </tr>
