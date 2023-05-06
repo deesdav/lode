@@ -88,8 +88,6 @@ const numbers = document.getElementsByClassName("number");
 const creatorHeadline = document.getElementById("creatorHeadline");
 const creatorContent = document.getElementById("creatorContent");
 const creator = document.getElementById("creator");
-document.
-
 
 
 wrong1.onclick = () => {
