@@ -477,7 +477,7 @@ n64.onclick = () => {
         n64.style.borderColor = "red";
         document.title = "SCORE: 75";
     }
-
+/*
     if (score.innerHTML == 75) {
         paragraph.innerHTML = `${"you won"}`;
         document.title = "YOU WON";
@@ -496,7 +496,9 @@ n64.onclick = () => {
             audioWin.pause();
             audioWin.currentTime = 0;
         }, 5000);
+        
     }
+    */
 }
 paragraph.onclick = () => {
     window.location.reload();
