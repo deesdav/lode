@@ -70,6 +70,7 @@ const n64 = document.getElementById("64");
 
 const score = document.getElementById("score");
 const timer = document.getElementById("timer");
+const countOfVessels = document.getElementById("countOfVessels");
 const paragraph = document.getElementById("paragraph");
 const gameArea = document.getElementById("gameArea");
 const grid = document.getElementById("grid");
@@ -79,6 +80,7 @@ const infoBox = document.getElementById("info-box");
 const play = document.getElementById("play");
 const scoreText = document.getElementById("scoreText");
 const timerText = document.getElementById("timerText");
+const vesselsText = document.getElementById("vesselsText");
 const audio = document.getElementById("audio");
 const audioWin = document.getElementById("audioWin");
 const audioLoss = document.getElementById("audioLoss");
@@ -88,6 +90,19 @@ const numbers = document.getElementsByClassName("number");
 const creatorHeadline = document.getElementById("creatorHeadline");
 const creatorContent = document.getElementById("creatorContent");
 const creator = document.getElementById("creator");
+
+const videoClick = document.getElementById("videoClick");
+const video = document.getElementById("video");
+
+videoClick.onclick = () => {
+    video.style.display = "flex";
+    videoClick.style.display = "none";
+    video.src = "./res/video/howto.webm";
+    setInterval(() => {
+        video.style.display = "none";
+    }, 15000);
+}
+
 
 /* custom cursor
 const cursor = document.querySelector('.cursor')
@@ -319,11 +334,14 @@ play.onclick = () => {
     start.style.display = "block";
     scoreText.style.display = "block";
     timerText.style.display = "block";
+    vesselsText.style.display = "block";
     infoBox.style.display = "flex";
     headline.style.fontSize = "50px";
     audio.play();
     changeSquareColor();
     document.title = "SCORE: 0";
+    video.style.display = "none";
+    videoClick.style.display = "none";
 }
 
 
@@ -338,6 +356,7 @@ n00.onclick = () => {
         score.innerHTML = 5;
         timerValue -= 50;
         document.title = "SCORE: 5";
+        countOfVessels.innerHTML = 14;
     }
 }
 n01.onclick = () => {
@@ -347,6 +366,7 @@ n01.onclick = () => {
         n01.style.borderColor = "red";
         timerValue -= 50;
         document.title = "SCORE: 10";
+        countOfVessels.innerHTML = 13;
     }
 
 }
@@ -356,6 +376,7 @@ n03.onclick = () => {
         document.title = "SCORE: 15";
         lod3.style.display = "block";
         n03.style.borderColor = "red";
+        countOfVessels.innerHTML = 12;
     }
 }
 n06.onclick = () => {
@@ -365,6 +386,7 @@ n06.onclick = () => {
         lod6.style.display = "block";
         n06.style.borderColor = "red";
         document.title = "SCORE: 20";
+        countOfVessels.innerHTML = 11;
     }
 
 }
@@ -375,6 +397,7 @@ n13.onclick = () => {
         lod13.style.display = "block";
         document.title = "SCORE: 25";
         n13.style.borderColor = "red";
+        countOfVessels.innerHTML = 10;
     }
 
 }
@@ -386,6 +409,7 @@ n20.onclick = () => {
         lod20.style.display = "block";
         n20.style.borderColor = "red";
         document.title = "SCORE: 30";
+        countOfVessels.innerHTML = 9;
     }
 
 }
@@ -396,6 +420,7 @@ n24.onclick = () => {
         lod24.style.display = "block";
         n24.style.borderColor = "red";
         document.title = "SCORE: 35";
+        countOfVessels.innerHTML = 8;
     }
 
 }
@@ -406,6 +431,7 @@ n25.onclick = () => {
         lod25.style.display = "block";
         n25.style.borderColor = "red";
         document.title = "SCORE: 40";
+        countOfVessels.innerHTML = 7;
     }
 
 }
@@ -416,6 +442,7 @@ n30.onclick = () => {
         lod30.style.display = "block";
         n30.style.borderColor = "red";
         document.title = "SCORE: 45";
+        countOfVessels.innerHTML = 6;
     }
 
 }
@@ -426,6 +453,7 @@ n36.onclick = () => {
         lod36.style.display = "block";
         n36.style.borderColor = "red";
         document.title = "SCORE: 50";
+        countOfVessels.innerHTML = 5;
     }
 
 }
@@ -436,6 +464,7 @@ n40.onclick = () => {
         lod40.style.display = "block";
         n40.style.borderColor = "red";
         document.title = "SCORE: 55";
+        countOfVessels.innerHTML = 4;
     }
 
 }
@@ -446,6 +475,7 @@ n43.onclick = () => {
         lod43.style.display = "block";
         n43.style.borderColor = "red";
         document.title = "SCORE: 60";
+        countOfVessels.innerHTML = 3;
     }
 
 }
@@ -456,6 +486,7 @@ n52.onclick = () => {
         lod52.style.display = "block";
         n52.style.borderColor = "red";
         document.title = "SCORE: 65";
+        countOfVessels.innerHTML = 2;
     }
 
 }
@@ -466,6 +497,7 @@ n63.onclick = () => {
         lod63.style.display = "block";
         n63.style.borderColor = "red";
         document.title = "SCORE: 70";
+        countOfVessels.innerHTML = 1;
     }
 
 }
@@ -476,6 +508,7 @@ n64.onclick = () => {
         lod64.style.display = "block";
         n64.style.borderColor = "red";
         document.title = "SCORE: 75";
+        countOfVessels.innerHTML = 0;
     }
 /*
     if (score.innerHTML == 75) {
@@ -509,6 +542,5 @@ headline.onclick = () => {
 }
 
 console.log(timerValue);
-
 
 

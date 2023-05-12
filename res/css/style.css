@@ -18,8 +18,30 @@ html {
 	background-attachment: fixed;
 
 }
-
-
+#videoClick{
+	border: none;
+	background-color: whitesmoke;
+	position: absolute;
+	right: 30px;
+	bottom: 25px;
+	font-size: x-large;
+	display: block;
+	cursor: pointer;
+	padding: 0;
+}
+#videoClick:hover{
+	color: aqua;
+}
+#video{
+	display: none;
+	border: 2px solid black;
+	position: absolute;
+	padding: 0;
+	bottom: 0;
+	right: 0;
+	background-color: whitesmoke;
+	overflow: hidden;
+}
 
 
 #gameArea {
@@ -63,7 +85,7 @@ html {
 }
 
 #scoreText,
-#timerText {
+#timerText, #vesselsText {
 	text-align: center;
 	text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
 		0px -4px 5px rgba(255, 255, 255, 0.3);
@@ -81,6 +103,12 @@ html {
 #timerText {
 	position: absolute;
 	top: 65px;
+	left: 130px;
+	font-size: xx-large;
+}
+#vesselsText{
+	position: absolute;
+	top: 115px;
 	left: 130px;
 	font-size: xx-large;
 }
@@ -360,6 +388,11 @@ td div {
 	#timerText {
 		position: absolute;
 		top: 800px;
+		left: -100px;
+	}
+	#vesselsText {
+		position: absolute;
+		top: 900px;
 		left: -100px;
 	}
 
