@@ -307,7 +307,7 @@ play.onclick = () => {
     document.body.style.backgroundImage = "url(./res/img/bg.jpg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundColor = "blueviolet";
+    document.body.style.backgroundColor = "black";
     document.body.style.backgroundSize = "cover";
     document.body.style.color = "white";
     headline.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
