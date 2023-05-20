@@ -90,6 +90,7 @@ const numbers = document.getElementsByClassName("number");
 const creatorHeadline = document.getElementById("creatorHeadline");
 const creatorContent = document.getElementById("creatorContent");
 const creator = document.getElementById("creator");
+const faBrands = document.getElementById("fa-brands");
 
 const videoClick = document.getElementById("videoClick");
 const video = document.getElementById("video");
@@ -219,17 +220,18 @@ wrong34.onclick = () => {
 window.onload = () => {
     const randomTrack = Math.floor(Math.random() * 5);
     if (randomTrack >= 0 && randomTrack <= 1) {
-        audio.src = "./res/audio/already-rich-slowed-reverb.mp3";
+        audio.src = "./res/audio/come-and-get-your-love-single-edit-audio.mp3";
     }
     if (randomTrack >= 1 && randomTrack <= 2) {
-        audio.src = "./res/audio/r-i-p.mp3";
+        audio.src = "./res/audio/crazy-on-you.mp3";
     }
     if (randomTrack >= 2 && randomTrack <= 3) {
-        audio.src = "./res/audio/travis-scott-lyrics.mp3";
+        audio.src = "./res/audio/fox-on-the-run-promo-clip-official.mp3";
     }
     if (randomTrack >= 3 && randomTrack <= 4) {
-        audio.src = "./res/audio/split-sped-up.mp3";
+        audio.src = "./res/audio/in-the-meantime-official-music-video.mp3";
     }
+    console.log(randomTrack);
 }
 
 
@@ -256,9 +258,11 @@ const changeSquareColor = () => {
     console.log(randomNumber(0, 255));
     [...letters].forEach((letter) => {
         letter.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        letter.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
     });
     [...numbers].forEach((number) => {
         number.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        number.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
     });
     if (r <= 128 || g <= 128 || b <= 128) {
         [...letters].forEach((letter) => {
@@ -277,9 +281,41 @@ const changeSquareColor = () => {
     }
 }
 
-
+headline.onmouseover = () => {
+    headline.style.cursor = "pointer";
+    paragraph.style.opacity = "0";
+}
+headline.onmouseout = () => {
+    headline.style.cursor = "pointer";
+    paragraph.style.opacity = "1";
+}
 
 play.onclick = () => {
+    headline.innerHTML = `Spaceships`;
+    document.body.style.backgroundImage = "url(./res/img/bg.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundColor = "blueviolet";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.color = "white";
+    headline.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    timerText.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    timer.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    score.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    scoreText.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    vesselsText.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    countOfVessels.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    paragraph.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    start.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    infoBox.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    paragraph.style.fontSize = "xxx-large";
+    doubleclick.style.fontFamily = "'guaradiansOfTheGalaxy', sans-serif";
+    doubleclick.style.fontSize = "xx-large";
+    doubleclick.style.right = "180px";
+    creatorHeadline.style.display = "none";
+    start.style.left = "300px";
+    start.style.top = "200px";
+
     const myTimer = setInterval(() => {
         timer.innerHTML--;
         if (timer.innerHTML == 0) {
@@ -326,7 +362,7 @@ play.onclick = () => {
         if (timer.innerHTML <= 5) {
             timer.style.color = "red";
         } else {
-            timer.style.color = "black";
+            timer.style.color = "white";
         }
     }, timerValue);
     play.style.display = "none";
@@ -539,6 +575,7 @@ paragraph.onclick = () => {
 
 headline.onclick = () => {
     window.location.reload();
+   
 }
 
 console.log(timerValue);
