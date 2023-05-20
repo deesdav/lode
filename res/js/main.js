@@ -231,6 +231,18 @@ window.onload = () => {
     if (randomTrack >= 3 && randomTrack <= 4) {
         audio.src = "./res/audio/in-the-meantime-official-music-video.mp3";
     }
+    if (randomTrack >= 4 && randomTrack <= 5) {
+        audio.src = "./res/audio/rainbow-since-you-been-gone-hq.mp3";
+    }
+    if (randomTrack >= 5 && randomTrack <= 6) {
+        audio.src = "./res/audio/cherry-bomb.mp3";
+    }
+    if (randomTrack >= 6 && randomTrack <= 7) {
+        audio.src = "./res/audio/escape-the-pina-colada-song.mp3";
+    }
+    if (randomTrack >= 7 && randomTrack <= 8) {
+        audio.src = "./res/audio/creep-acoustic-guardians-of-the-galaxy-vol-3-soundtrack.mp3";
+    }
     console.log(randomTrack);
 }
 
