@@ -218,29 +218,29 @@ wrong34.onclick = () => {
 
 
 window.onload = () => {
-    const randomTrack = Math.floor(Math.random() * 5);
-    if (randomTrack >= 0 && randomTrack <= 1) {
+    const randomTrack = Math.floor(Math.random() * 8);
+    if (randomTrack == 0 && randomTrack <= 1) {
         audio.src = "./res/audio/come-and-get-your-love-single-edit-audio.mp3";
     }
-    if (randomTrack >= 1 && randomTrack <= 2) {
+    if (randomTrack == 1) {
         audio.src = "./res/audio/crazy-on-you.mp3";
     }
-    if (randomTrack >= 2 && randomTrack <= 3) {
+    if (randomTrack == 2) {
         audio.src = "./res/audio/fox-on-the-run-promo-clip-official.mp3";
     }
-    if (randomTrack >= 3 && randomTrack <= 4) {
+    if (randomTrack == 3) {
         audio.src = "./res/audio/in-the-meantime-official-music-video.mp3";
     }
-    if (randomTrack >= 4 && randomTrack <= 5) {
+    if (randomTrack == 4) {
         audio.src = "./res/audio/rainbow-since-you-been-gone-hq.mp3";
     }
-    if (randomTrack >= 5 && randomTrack <= 6) {
+    if (randomTrack == 5 ) {
         audio.src = "./res/audio/cherry-bomb.mp3";
     }
-    if (randomTrack >= 6 && randomTrack <= 7) {
+    if (randomTrack == 6) {
         audio.src = "./res/audio/escape-the-pina-colada-song.mp3";
     }
-    if (randomTrack >= 7 && randomTrack <= 8) {
+    if (randomTrack == 7) {
         audio.src = "./res/audio/creep-acoustic-guardians-of-the-galaxy-vol-3-soundtrack.mp3";
     }
     console.log(randomTrack);
