@@ -219,7 +219,7 @@ wrong34.onclick = () => {
 
 window.onload = () => {
     const randomTrack = Math.floor(Math.random() * 8);
-    if (randomTrack == 0 && randomTrack <= 1) {
+    if (randomTrack == 0) {
         audio.src = "./res/audio/come-and-get-your-love-single-edit-audio.mp3";
     }
     if (randomTrack == 1) {
